@@ -1,17 +1,40 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<h4>home page</h4>
-	<a href="{{ url_for('createTask') }}">Create Task</a>
-	<!-- <a href="{@ url_for('deleteTask')}}">Delete Task</a> -->
+{% if tasks %}
+	<div class="section">
+		{% for task, task_description in tasks.items() %}
+		{% if task != 'session'%}
 
-	<h3>My Tasks</h3>
-	{% for task, task_description in tasks.items() %}
-	{% if task != 'session' %}
-		<h6>{{ task }}</h6>
-		<p>{{ task_description }}</p>
-		<a href="{{ url_for('updateTask', title=task) }}"><button>Update</button></a>
-		<a href="{{ url_for('deleteTask', title=task) }}"><button>Remove</button></a>
-	{% endif %}
-	{% endfor %}
+		<div class="task">
+		<div class="title">                                                                         			
+			{{ task }}
+		</div>                                                                                      			
+		<div class="content">                                                                       			
+			<p class="content-text">{{ task_description }}</p>                 			
+			<div class="content-mod">                                                               			
+				<div class="update-btn-div">                                                        			
+					<a href="{{ url_for('updateTask', title=task) }}"><button class="btn btn-outline-dark btn-update">Update</button></a>				
+				</div>                                                                              			
+				<div class="delete-btn-div">                                                        			
+					<a href="{{ url_for('deleteTask', title=task) }}"><button class="btn btn-outline-dark btn-delete">Delete</button></a>  			
+				</div>                                                                              			
+			</div>		                                                                          			
+		</div>                                                                                      			
+		</div>
+
+		{% endif %}
+		{% endfor %}
+	</div>
+
+{% else %}
+	<div class="no-task">
+		<span>No tasks available yet!</span>
+	</div>
+{% endif %}	
+<div class="create-button">
+		<div class="fa-wrapper">
+			<a href="{{ url_for('createTask') }}"><i class="fas fa-plus"></i></a>
+		</div>
+	</div>
 {% endblock %}

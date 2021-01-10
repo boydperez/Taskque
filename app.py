@@ -12,17 +12,16 @@ class CreateTaskForm(FlaskForm):
     submit = SubmitField('')
 
 
-
 @app.route('/', methods=['POST', 'GET'])
 def home():
     tasks = request.cookies
     return render_template('index.html', tasks=tasks)
 
+
 @app.route('/createtask', methods=['POST', 'GET'])
 def createTask():
     form = CreateTaskForm()
     if form.validate_on_submit():
-        # global tasks
         task = request.form.get('title')
         task_description = request.form.get('content')
 
@@ -30,6 +29,7 @@ def createTask():
         res.set_cookie(task, task_description, max_age=60*60*24*365) 
         return res
     return render_template('createtask.html', form=form)
+
 
 @app.route('/updatetask/<title>', methods=['POST', 'GET'])
 def updateTask(title):

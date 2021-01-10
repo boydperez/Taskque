@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Todo</title>
+	<title>Taskque</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mobile_style.css')}}">
 </head>
 <body>
-	<div></div>
-	{% block content %}	
+	<div class="wrapper">
+		<div class="nav">
+			<a href="{{ url_for('home') }}"><span class="nav-brand">TASKQUE</span></a>
+		</div>
+		{% block content %}
+		{% endblock %}
+	</div>
+	{% block update %}
 	{% endblock %}
+
+	<script src="https://kit.fontawesome.com/2585a521e8.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
