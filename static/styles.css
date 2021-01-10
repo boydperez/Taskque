@@ -1,0 +1,213 @@
+:root {
+} 
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #f5f4f4;
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 12px;
+	margin: 0;
+}
+
+.nav {
+	display: grid;
+	align-content: center; 
+	background: #00303f;
+	height: 5vh;
+}
+
+.nav a {
+	text-decoration: none;
+}
+
+.nav-brand {
+	display: inline-block;
+	height: 5vh;
+	padding-left: 15px;
+	font-family: 'Staatliches', cursive;
+	font-weight: bold;
+	font-size: 1.4em;
+	color: 	#f5f4f4;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.section {
+	background: #f5f4f4;	
+	display: grid; 
+	grid-row-gap: 20px;
+	grid-template-columns: 0.5fr;
+	padding: 50px;
+}
+
+.task {
+}
+
+.task:hover .title {
+	background: #cae4db;	
+	color: #131516;
+}
+
+.task:hover .content {
+	background: #00303f;
+	color: #c1c7c9;
+}
+
+.title {
+	background: #e7e7de;
+	padding: 5px 0 2px 9px;
+	min-height: 17px;
+	margin-bottom: 2px;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.content {
+	background: #e7e7de;
+	padding: 10px;
+	min-height: 50px;
+}
+
+.content-text {
+	font-size: 1.13em;
+	font-weight: 300;
+}
+
+.content-mod {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.update-btn-div {
+	margin-right: 0.5em;
+}
+
+.delete-btn-div {
+}
+
+.content-mod .btn {
+	font-size: 0.77em;
+	text-transform: uppercase;
+	padding: 2px;
+	border: 0;
+	border-radius: 0;
+	letter-spacing: 1px;
+}
+
+.btn-update {
+	color: #70af85;
+}
+.btn-delete {
+	color: #ef4f4f;
+}
+.btn-update:hover {
+	background: #70af85;	
+}
+.btn-delete:hover {
+	background: #ef4f4f;
+}
+
+.create-button {
+	position: fixed;	
+	right: 20%;
+	bottom: 10%;
+	width: 60px;
+	height: 60px;
+	background: #cdd0cb;
+	border-radius: 100px;
+}
+.fa-wrapper {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	width: 60px;
+	height: 60px;
+}
+
+.fas {
+	font-size: 30px;
+	color: #00303f;
+}
+.create-button:hover {
+	background: #00303f;
+}
+.create-button:hover .fas {
+	color: #d6efc7;
+}
+
+
+
+
+
+
+/* updatetask.html */
+
+.update-container {
+	background: #f5f4f4;
+	padding: 40px;	
+	display: flex;
+	justify-content: center;	
+}
+
+.update-section {
+	padding: 10px;
+	width: 50vw;
+	margin: 0.7vh auto auto auto;
+}
+
+.update-section label {
+	color: #6f9eaf;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.form-group .form-control {
+	color: #A0A0A0;
+}
+
+.update-title {
+	margin-bottom: 5px;
+	padding: 3px 0 3px 5px;
+}
+
+.update-content {
+	margin-bottom: 20px;
+	min-height: 100px;
+	padding: 3px 0 7px 5px;
+}
+
+.update-btn-container {
+	display: flex; 
+	justify-content: center;
+}
+
+.update-btn-container .btn {
+	background: #f5f4f4;	
+	color: #6f9eaf;
+	border-color: #6f9eaf;
+}
+
+.update-btn-container .btn:hover {
+	background: #00303f;	
+	color: #f5f4f4;
+	border-color: #A0A0A0;
+}
+
+
+.no-task {
+	font-size: 1.3em;
+	color: #A0A0A0;
+	margin: 3% auto auto 30%;
+}
+

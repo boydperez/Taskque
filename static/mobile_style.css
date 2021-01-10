@@ -1,0 +1,75 @@
+@media screen and (max-width: 480px) {
+	body {
+	}
+
+	.nav {
+		height: 30px;
+		display: table;
+	}
+
+	.nav-brand {
+		display: table-cell;
+		vertical-align: middle;
+		height: 30px;
+		font-size: 1em;
+		letter-spacing: 3px;
+	}
+
+	.section {
+		grid-template-columns: 1fr;
+	}
+
+	.title {
+		font-size: 0.8em;
+	}
+
+	.content {
+		min-height: 40px;	
+	}
+
+	.content-text {
+		font-size: 1em;
+	}
+
+	.content-mod .btn {
+		font-size: 0.5em;
+	}
+
+	/* updatetask.html */
+	.update-container {
+		padding: 0;
+		padding-top: 9px;
+	}
+
+	.update-section {
+		margin: 0;
+		width: 70vw;
+	}
+
+	.update-btn-container .btn {
+		background: #6f9eaf;	
+		color: #f5f4f4;
+		border-color: #A0A0A0;
+		font-size: 0.7em;
+	}
+
+	.create-button {
+		right: 15%;
+		bottom: 10%;
+		width: 55px;
+		height: 55px;
+	}
+
+	.fa-wrapper {
+		width: 55px;
+		height: 55px;
+	}
+
+	.fas {
+		font-size: 25px;
+	}
+
+	.no-task {
+		margin: 2% auto auto auto;
+	}
+}
